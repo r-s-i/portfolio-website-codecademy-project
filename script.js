@@ -13,3 +13,40 @@ function greetVisiter() {
 
 document.getElementById("greeting").innerHTML = greetVisiter();
 
+// Give the visiter an option to invert the colors:
+const invertColors = {
+  head: document.querySelector("head"),
+  link: document.createElement("link"),
+  img: document.querySelector("#color_inverter_img"),
+  isDark: true,
+
+  black() {
+    // Change the colors:
+    this.link.rel = "stylesheet"; 
+    this.link.href = "./darkStyle.css";
+    this.head.appendChild(this.link);
+    // Change the button img:
+    this.img.src = "./images/invert_colors_b_to_w.png";
+  },
+
+  white() {
+    // Change the colors:
+    this.head.removeChild(this.link);
+    // Change the button img:
+    this.img.src = "./images/invert_colors_w_to_b.png";
+  }
+}
+invertColors.black();
+
+const button = document.getElementById("color_inverter");
+button.addEventListener("click", ()=>{
+  if (invertColors.isDark) {
+    invertColors.white();
+    invertColors.isDark = false;
+  }
+  else {
+    invertColors.black();
+    invertColors.isDark = true;
+  }
+});
+
