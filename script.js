@@ -26,14 +26,14 @@ const invertColors = {
     this.link.href = "./darkStyle.css";
     this.head.appendChild(this.link);
     // Change the button img:
-    this.img.src = "./images/invert_colors_b_to_w.png";
+    this.img.src = "./images/invert_colors_b_to_w.webp";
   },
 
   white() {
     // Change the colors:
     this.head.removeChild(this.link);
     // Change the button img:
-    this.img.src = "./images/invert_colors_w_to_b.png";
+    this.img.src = "./images/invert_colors_w_to_b.webp";
   }
 }
 invertColors.black();
