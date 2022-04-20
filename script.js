@@ -50,3 +50,16 @@ button.addEventListener("click", ()=>{
   }
 });
 
+// Track the time since created date (19-apr-2022):
+function timeTracker() {
+  const milliOfADay = 24 * 60 * 60 * 1000;
+  const today = new Date();
+  const dayCreated = new Date(2022, 3, 19);
+  const diff = Math.floor((today - dayCreated) / milliOfADay);
+  let str = `Created ${diff}`;
+  str += (diff > 1) ? " days ago" : " day ago";
+  
+  return str;
+}
+
+document.getElementById("time_tracker").innerHTML = timeTracker();
