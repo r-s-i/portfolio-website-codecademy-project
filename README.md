@@ -10,7 +10,7 @@ This is my answer to the Codecademy's [*Portfolio Project: Personal Portfolio We
 - Counter that keeps track of the days since the site was created
 
 ## How to Use:
-It's hosted over on my [my personal website](https://robiniversen.com/). The dark/light toggle is located to the upper right.
+It's hosted over on [my personal website](https://robiniversen.com/portfolio-website-codecademy-project/index.html). The dark/light toggle is located to the upper right.
 
 ## Technologies:
 - HTML
